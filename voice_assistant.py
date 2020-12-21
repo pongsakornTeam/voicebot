@@ -29,7 +29,7 @@ def takeCommand():
         try:
             print("Recognizing...")    
             query = r.recognize_google(audio, language='en-in') #Using google for voice recognition.
-            print(f"User said: {query}\n")  #User query will be printed.    
+            #print(f"User said: {query}\n")  #User query will be printed.    
         except Exception as e:
             #print(e)  use only if you want to print the error!
             print("Say that again please...")   #Say that again will be printed in case of improper voice 
