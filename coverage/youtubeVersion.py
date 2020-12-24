@@ -1,8 +1,8 @@
 import speech_recognition as sr
 
-for index, name in enumerate(sr.Microphone.list_microphone_names()):
-    print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
-
+#for index, name in enumerate(sr.Microphone.list_microphone_names()):
+#    print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
+print('Start')
 listener = sr.Recognizer()
 try:
     with sr.Microphone(device_index=14) as source:
@@ -14,5 +14,6 @@ try:
             print(command)
         else :
             print('Hello')
-except:
+except Exception as e:
+    print(e)
     pass
