@@ -5,9 +5,9 @@ import speech_recognition as sr
 print('Start')
 listener = sr.Recognizer()
 try:
-    with sr.Microphone(device_index=14) as source:
+    with sr.Microphone() as source:
         print('listening')
-        voice = listener.listen(source,timeout=10,phrase_time_limit=10)
+        voice = listener.listen(source)
         command = listener.recognize_google(voice)
         command = command.lower()
         if 'alexa' in command :

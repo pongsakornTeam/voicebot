@@ -1,6 +1,8 @@
 import pyttsx3
 import datetime
 import speech_recognition as sr
+import wikipedia
+import webbrowser
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices') #getting details of the current voice
@@ -56,11 +58,8 @@ if __name__=="__main__" :
             speak("According to Wikipedia")
             print(results)
             speak(results)
-        else :
-            speak ('Fail 1')
-            print (query)
-        if 'hello' in query :
+        elif 'hello' in query :
             speak('Hello')      
         else :
-            speak('Fail 2')  
-            speak(query) 
+            speak('I can not understand')
+            speak(query)
