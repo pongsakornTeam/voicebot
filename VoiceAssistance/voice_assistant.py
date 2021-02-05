@@ -1,13 +1,8 @@
 import pyttsx3
 import datetime
 import speech_recognition as sr
-<<<<<<< HEAD:voice_assistant.py
-import wikipedia
-import webbrowser
-=======
 import webbrowser
 import wikipedia
->>>>>>> 7ffdc836442bfe219187464c77c65d6608f9d56e:VoiceAssistance/voice_assistant.py
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices') #getting details of the current voice
