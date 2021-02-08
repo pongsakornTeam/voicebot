@@ -58,6 +58,8 @@ if __name__=="__main__" :
             speak("According to Wikipedia")
             print(results)
             speak(results)
+<<<<<<< HEAD:voice_assistant.py
+=======
             print (query)
         elif 'open youtube' in query:
             webbrowser.open("youtube.com")
@@ -71,8 +73,9 @@ if __name__=="__main__" :
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
             speak(f"Ma'am, the time is {strTime}")
+>>>>>>> 7ffdc836442bfe219187464c77c65d6608f9d56e:VoiceAssistance/voice_assistant.py
         elif 'hello' in query :
             speak('Hello')      
         else :
-            speak('Fail 2')  
-            speak(query) 
+            speak('I can not understand')
+            speak(query)
