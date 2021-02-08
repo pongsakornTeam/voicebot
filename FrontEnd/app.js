@@ -5,7 +5,16 @@ new Vue({
         name : "Teamy",
         job : "PA",
         age : "20",
-        website:'http://www.google.com'
+        count : 0,
+        website:'http://www.google.com',
+        toys : [],
+        gender : '',
+        like : false,
+        product : ['book','notebook','pen'],
+        employee :[
+            {name:'a001',age:15},
+            {name:'b001',age:25}
+        ]
     },
     methods:{
         getName : function(){
@@ -24,6 +33,10 @@ new Vue({
         subTract : function(){
             this.age--;
             console.log(this.age);
+        },
+        addCount : function(){
+            this.count++;
+            console.log(this.count);
         }
     }
 })

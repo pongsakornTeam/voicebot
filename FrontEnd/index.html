@@ -14,10 +14,45 @@
         <p>{{getJob()}}</p>
         <p>{{age}}</p>
         <p><a v-bind:href="website">click here</a></p>
-        <input type="text" name="" v-bind:value="job    ">
+        <p><input type="text" name="" v-bind:value="job"></p>
+        <p><input type="text" v-on:keyup="addCount"></p>
+        <p><input type="text" v-on:keyup.enter="addCount"></p>
+        <p>{{count}}</p>
         <button type="button" name="add" v-on:click="addAge()">Add</button>
         <button type="button" name="subtract" v-on:click="subTract()">Subtract</button>
-        
+        <p><input type="text" v-model="job"></p>
+
+        <input type="checkbox" value="car" v-model="toys">
+        <label>Car</label>
+        <input type="checkbox" value="home" v-model="toys">
+        <label>Home</label>
+        <input type="checkbox" value="iphone" v-model="toys">
+        <label>Iphone</label>
+        <p>Toy : {{toys}}</p>
+
+        <input type="radio" value="male" v-model="gender">
+        <label>Male</label>
+        <input type="radio" value="female" v-model="gender">
+        <label>Female</label>
+        <p>GENDER : {{gender}}</p>
+        <select v-model="job">
+            <option disabled value="">กรุณาเลือกอาชีพ</option>
+            <option>programer</option>
+            <option>merchant</option>
+            <option>doctor</option>
+        </select>
+
+        <p><button type="button" v-on:click="like=!like">Like</button></p>
+        <p v-if="like">Hello</p>
+
+        <p>{{product[0]}}</p>
+        <ul>
+            <li v-for="p in product">{{p}}</li>
+        </ul>
+        <ul>
+            <li v-for="e in employee">{{e}}</li>
+            <li v-for="e in employee">{{e.name}} | {{e.age}}</li>
+        </ul>
     </div>
     <script src="app.js" charset="utf-8"></script>    
 </body>
