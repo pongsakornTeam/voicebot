@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Tutorial</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue-app">
+        {{message}}
+        <p>{{getName()}}</p>
+        <p>{{setName('eiei007')}}</p>
+        <p>{{getJob()}}</p>
+        <p>{{age}}</p>
+        <p><a v-bind:href="website">click here</a></p>
+        <input type="text" name="" v-bind:value="job    ">
+        <button type="button" name="add" v-on:click="addAge()">Add</button>
+        <button type="button" name="subtract" v-on:click="subTract()">Subtract</button>
+        
+    </div>
+    <script src="app.js" charset="utf-8"></script>    
+</body>
+</html>
