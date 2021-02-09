@@ -17,7 +17,22 @@
                 {{emp.empName}} | {{emp.salary}}
             </li>
         </ul>
+
+        <p>summary salary {{summation}}</p>
+
+        <koo></koo>
+        <post title="Hello"></post>
     </div>
+
+    <div id="like">
+        <button type="button" name="button" v-on:click="changeLike">Like</button>
+        {{like}}
+    </div>
+    <div id="post">
+        {{title}} <br>
+        {{message}}
+    </div>
+    
     <script src="vueapp.js" charset="utf-8"></script>    
 </body>
 </html>

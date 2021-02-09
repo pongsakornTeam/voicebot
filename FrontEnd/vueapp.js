@@ -1,3 +1,15 @@
+Vue.component('koo',{
+    data : function(){
+        return{
+            count : 0
+        }
+    },
+    template : '<button v-on:click="count++">Click {{count}}</button>'
+});
+Vue.component('post',{
+    props:['title'],
+    template : '<p>Title is {{title}} </p>'
+})
 new Vue({
     el:"#vue-app",
     data : {
@@ -24,9 +36,44 @@ new Vue({
             });
             this.newData.empName = '';
             this.newData.salary = 0;
+        },
+        showMessage : function (){
+            alert('save data complete');
         }
     },
-    compute : {
-        
+    computed : {
+        summation:function(){
+            var sum = this.empGroup.reduce(
+                function(value, data){
+                    return value + Number(data.salary)
+                },0);
+            return sum;
+        }
+    },
+    watch : {
+        summation : function(){
+            this.showMessage();
+        }
     }
 })
+
+var like=new Vue({
+    el:"#like",
+    data : {
+        like : false
+    },
+    methods : {
+        changeLike : function(){
+            console.log(this.like)
+        }
+    }
+});
+
+var post=new Vue({
+    el:"#post",
+    data :{
+        title : 'project',
+        message : 'detail project',
+    }
+});
+
