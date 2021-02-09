@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Tutorial 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <span>employee name</span>
+        <input v-model="newData.empName">
+        <input v-model="newData.salary">
+        <p><button @click="addEmp">add</button></p>
+        <ul>
+            <li v-for="emp in empGroup">
+                {{emp.empName}} | {{emp.salary}}
+            </li>
+        </ul>
+    </div>
+    <script src="vueapp.js" charset="utf-8"></script>    
+</body>
+</html>
