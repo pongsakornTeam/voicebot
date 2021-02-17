@@ -1,0 +1,32 @@
+<!-- path 19-20-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Tutorial 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <ul>
+            <li v-for="comment in comments" 
+            is="showcomment" 
+            v-bind:commentpost="comment"></li>
+        </ul>
+        <input type="text" v-model="newComment" v-on:keyup.enter="addComment">
+    </div>
+    <br>--------------------------------------------------<br>
+    <div id="vue-app2">
+       <foodApp></foodApp>
+        
+        <template id="foodarea">
+            <div id="food">
+                <h4>menu</h4>
+                <p>food1</p>
+            </div>
+        </template>
+    </div>
+    <script src="vue2.js" charset="utf-8"></script>    
+</body>
+</html>

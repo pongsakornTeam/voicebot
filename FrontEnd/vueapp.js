@@ -1,3 +1,4 @@
+//path 11-18
 Vue.component('koo',{
     data : function(){
         return{
@@ -6,9 +7,23 @@ Vue.component('koo',{
     },
     template : '<button v-on:click="count++">Click {{count}}</button>'
 });
+
 Vue.component('post',{
     props:['title'],
     template : '<p>Title is {{title}} </p>'
+})
+Vue.component('showview',{
+    props:{
+        title:{
+            type:String,
+            required:true
+        },
+        view:{
+            type:Number,
+            default:0
+        }
+    },
+    template:'<p>{{title}} | {{view}}</p>'
 })
 new Vue({
     el:"#vue-app",
