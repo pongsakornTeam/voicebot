@@ -44,17 +44,17 @@
 		</div>
 		<div id="featured" class="body">
 			<div id="main">
-				<h1>Blog</h1>
-					<input type="text" name="input-daily">
-					<button class="ui button">Add Event</button>
-				<ul>
-					<li>
-						<div id="daily-blog">
-							<dailyblogdate></dailyblogdate>
-						</div>
-						<!--<img src="images/family-outing.jpg" alt="Img"> <span class="time">Feb<br> 25</span> -->
-					</li>
-				</ul>
+				<div id="daily-blog">
+					<h1>Blog</h1>
+					<input type="text" name="input-daily" v-model="newDailyEvent.message" v-on:keyup.enter="addEvent">
+					<button class="ui button" v-on:click="addEvent()">Add Event</button>
+					<ul>
+						<li v-for="dailyEvent in dailyEvents">
+							<span class="time"> {{dailyEvent.mounthShort}} <br> {{dailyEvent.numDate}}</span> <p>  {{dailyEvent.message}}</p>
+							<!-- <dailyblogdate v-bind:mounth-short="mounthShort" v-bind:num-date="numDate"></dailyblogdate>-->
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div id="sidebar">
 				<h1>Q&amp;A</h1>
@@ -103,4 +103,5 @@
 	</div>
 	<script src="daily.js" charset="utf-8"></script>
 </body>
+
 </html>
