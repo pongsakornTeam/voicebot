@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .classpath
 .project
 .settings/
@@ -5,3 +6,6 @@
 /bin/
 *.class
 /target/
+=======
+/.metadata/
+>>>>>>> fc0cbce32021bfcf1294a79d4d588accddf929ba
